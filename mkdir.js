@@ -5,6 +5,6 @@ if (process.argv.length != 3) {
   process.exit(1)
 }
 
-let name = process.argv[2]
+let nameFolder = process.argv[2]
 
-mkdirSync(`./${name}`)
+mkdirSync(`./${nameFolder}`)
