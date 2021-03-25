@@ -17,10 +17,10 @@ if (!stats.isDirectory()) {
   process.exit(1)
 }
 
-filenames = fs.readdirSync(process.argv[2]);
+fileNames = fs.readdirSync(process.argv[2]);
   
 console.log("\nCurrent directory filenames:");
-filenames.forEach(file => {
+fileNames.forEach(file => {
   console.log(file);
 });
 
