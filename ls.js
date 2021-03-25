@@ -11,6 +11,12 @@ if (!fs.existsSync(process.argv[2])) {
   process.exit(1)
 }
 
+const stats = fs.statSync(process.argv[2])
+if (!stats.isDirectory()) {
+  console.log(`Error: ${process.argv[2]} is not a path`)
+  process.exit(1)
+}
+
 filenames = fs.readdirSync(process.argv[2]);
   
 console.log("\nCurrent directory filenames:");
